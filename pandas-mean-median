@@ -1,0 +1,6 @@
+import pandas as pd
+
+df = pd.read_csv('bussines-file.csv')
+df_mean_median_mode = df.agg({"Data_value":['median','mean']})
+
+print(df_mean_median_mode)
