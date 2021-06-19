@@ -1,0 +1,7 @@
+import pandas as pd
+import statistics
+
+df = pd.read_csv('population.csv')
+dataset = df['population']
+
+dataset_mean = statistics.mean(dataset)
