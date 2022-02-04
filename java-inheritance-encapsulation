@@ -1,0 +1,38 @@
+// Superclass:
+package classproject;
+
+public class vehicle {
+    protected String brand ;
+    private String enginecode ;
+    public String getenginecod(){
+        return this.enginecode;
+    }
+    public void setenginecode(String enginec){
+          enginecode = enginec;
+    }
+
+    public void Mymethod(){
+        System.out.println("hello every body!");
+    }
+    
+}
+
+
+//Subclass:
+public class car extends vehicle{
+    private String color ;
+    public void mymethod(){
+        System.out.println("tuuut tuuuut!");
+    }
+
+    public static void main(String[] args){
+        Scanner objectinput = new Scanner(System.in);
+        vehicle obj = new vehicle();
+        System.out.println("please enter your engine code : ");
+        String num = objectinput.nextLine();
+        obj.setenginecode(num);
+        String result = obj.getenginecod();
+        System.out.println(result);
+
+    }
+}
