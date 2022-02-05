@@ -1,0 +1,35 @@
+import java.time.LocalDate;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+public class date2 {
+
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Which one do you need to know : 1. Date 2. Time 3.both :");
+        String input = obj.nextLine();
+
+        switch (input){
+            case "Time" :
+            LocalTime myobj = LocalTime.now();
+            System.out.println(myobj);
+            break;
+            case "Date" :
+            LocalDate myobj2 = LocalDate.now();
+            System.out.println(myobj2);
+            break;
+            case "both" :
+            LocalDateTime obj3 = LocalDateTime.now();
+            DateTimeFormatter myformatobj = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+            String finalformat = obj3.format(myformatobj);
+            System.out.println(finalformat);
+
+        }
+
+
+    }
+    
+}
