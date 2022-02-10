@@ -1,0 +1,44 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class person
+    {
+        private string name;
+        private string address;
+        public int Age;
+
+        public person(string personname , string personaddress , int age)
+        {
+            name = personname;
+           address = personaddress;
+            Age = age;
+           
+        }
+        public person( )
+        {
+            name = "sanaz";
+            address = "koza mah";
+            Age = 30;
+        }
+        
+
+        public void walk(string name)
+        {
+            Console.WriteLine(name + " is walking !");
+        }
+    }
+    class Program
+    {
+        static string name;
+       static void Main(string[] args)
+        {
+            name = "pedram";
+            person human = new person("sanaz" , "koza mah 334488", 45);
+            person human2 = new person();
+            Console.WriteLine(human.Age);
+            Console.WriteLine(human2.Age);
+
+        }
+    }
+}
