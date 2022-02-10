@@ -1,0 +1,27 @@
+using System;
+namespace Databasereader
+{
+    class DataBaseReader
+    {
+        private string databasereader;
+        private int cursor;
+
+        public DataBaseReader(string dbname)
+        {
+            databasereader = dbname;
+            cursor = 0;
+
+        }
+        public DataBaseReader(string dbname , int cursorpoint)
+        {
+            databasereader = dbname;
+            cursor = cursorpoint;
+        }
+        static void Main(string[] args)
+        {
+            DataBaseReader obj = new DataBaseReader("mongodb");
+            DataBaseReader obj2 = new DataBaseReader("mongodb", 56);
+
+        }
+    }
+}
