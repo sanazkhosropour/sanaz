@@ -1,0 +1,31 @@
+package classproject;
+abstract class vehicle {
+  public abstract void enginesound();
+  public void enginmodel(String power){
+      System.out.println("the power of engine is : " + power);
+  }
+}
+
+
+
+
+ public class car extends vehicle {
+
+    public void enginesound(){
+        System.out.println("ghooom ghoom!");
+    }
+    
+
+}
+
+public class main{
+
+    public static void main(String[] args){
+
+        car obj = new car();
+
+        obj.enginesound();
+        obj.enginmodel("3300");
+
+    }
+}
