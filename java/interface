@@ -1,0 +1,31 @@
+package classproject;
+
+interface vehicle{
+  public void enginepower(String x);
+  public void carsound();
+}
+
+package classproject;
+
+
+ public class car implements vehicle{
+    public void enginepower(String power){
+        System.out.println(power);
+    }
+    public void carsound(){
+        System.out.println("tuu tuuu");
+    }
+}
+
+package classproject;
+
+ class Main {
+    public static void main(String[] args){
+
+        car obj = new car();
+        obj.carsound();
+        obj.enginepower("1800");
+
+    }
+    
+}
